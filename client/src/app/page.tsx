@@ -1,5 +1,5 @@
 import { Sidebar } from "@/components";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Home({children}:any) {
   return (
