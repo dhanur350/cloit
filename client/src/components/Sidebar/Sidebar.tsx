@@ -5,13 +5,13 @@ import Link from 'next/link';
 import { SvgIcon, CUSTOM_ICON_REF } from '..';
 import { sidebarMenus } from '@/utils';
 
-interface Props {
+// interface Props {
 
-}
+// }
 
-function Sidebar(props: Props) {
+function Sidebar() {
 
-    const { } = props;
+    // const { } = props;
 
     const [open, setOpen] = useState<boolean>(false);
 
