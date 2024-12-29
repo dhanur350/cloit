@@ -1,7 +1,5 @@
-function Home() {
-    return(
-        <div>home</div>
-    )
-}
+import { Home } from '@/app';
 
-export default Home;
+export default function home() {
+    return <Home />
+}
