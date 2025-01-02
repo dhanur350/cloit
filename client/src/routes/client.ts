@@ -1,3 +1,6 @@
 export const client = {
-    home: '/home'   
+    home: '/home',
+    menu: '/menu',
+    about: '/about',
+    systemcode: '/systemcode',
 }

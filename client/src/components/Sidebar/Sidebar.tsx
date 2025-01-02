@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { SvgIcon, CUSTOM_ICON_REF } from '..';
-import { Menu, sidebarMenus, sidebarMenusOthers } from '@/utils';
+import { sidebarMenus, sidebarMenusOthers } from '@/utils';
 
 // interface Props {
 
@@ -13,13 +13,13 @@ function Sidebar() {
 
     // const { } = props;
 
-    const [open, setOpen] = useState<boolean>(false);
+    const [open, setOpen] = useState<boolean>(true);
 
     const handleOpenSidebar = () => {
         setOpen(!open);
     };
 
-    const renderSidebarMenus = (item: Menu, index: number) => {
+    const renderSidebarMenus = (item: any, index: number) => {
         
         const { icon, name, link } = item;
 
@@ -27,27 +27,27 @@ function Sidebar() {
 
         return(
             <Link key={`sidebar-menu-index-${index}`} href={link} className={`flex items-center py-3 px-4 my-2 rounded-xl cursor-pointer hover:bg-green-color hover:text-black ${firstIndex ? 'text-white' : 'text-blue-shade-2'}`}>
-                <SvgIcon name={icon} baseClassname='w-4' />
+                <SvgIcon name={icon} baseClassname='w-6' />
                 <span className={`${open ? 'block' : 'hidden'} pl-2`}>{name}</span>
             </Link>
         )
     }
 
-    const renderSidebarOtherMenus = (item: Menu, index: number) => {
+    const renderSidebarOtherMenus = (item: any, index: number) => {
         
         const { icon, name, link } = item;
 
         return(
             <Link key={`sidebar-menu-index-${index}`} href={link} className={`flex items-center py-3 px-4 my-2 rounded-xl cursor-pointer text-blue-shade-2 hover:bg-green-color hover:text-black`}>
-                <SvgIcon name={icon} baseClassname='w-4' />
+                <SvgIcon name={icon} baseClassname='w-6' />
                 <span className={`${open ? 'block' : 'hidden'} pl-2`}>{name}</span>
             </Link>
         )
     }
 
     return (
-        <div className={`bg-blue-color p-8 rounded-[25px] h-full ease-in duration-300 ${open ? 'w-[250px]' : 'flex flex-col items-center w-[100px]'}`}>
-            <div className="flex justify-between items-center">
+        <div className={`bg-blue-color p-2 rounded-[25px] h-full ease-in duration-300 ${open ? 'w-[250px]' : 'flex flex-col items-center w-[100px]'}`}>
+            <div className="flex justify-between items-center p-6">
                 <Link href={"/"} className={`${open ? 'block' : 'hidden'}`}>
                     <SvgIcon name={CUSTOM_ICON_REF.Logo} baseClassname='w-20' />
                 </Link>

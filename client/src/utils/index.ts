@@ -1,15 +1,9 @@
-import { CUSTOM_ICON_REF } from "@/components";
+import { CUSTOM_ICON_REF } from "../components/SvgIcon/IconRef";
 import { URLRoutes } from "@/routes";
 
 const { client } = URLRoutes;
 
-export interface Menu {
-    name: string;
-    icon: CUSTOM_ICON_REF;
-    link: string;
-}
-
-export const sidebarMenus: Menu[] = [
+export const sidebarMenus: any[] = [
     {
         name: 'Systems',
         icon: CUSTOM_ICON_REF.FolderIcon,
@@ -18,21 +12,26 @@ export const sidebarMenus: Menu[] = [
     {
         name: 'System Code',
         icon: CUSTOM_ICON_REF.SubMenu,
-        link: ''
+        link: client.systemcode
     },
     {
         name: 'Properties',
         icon: CUSTOM_ICON_REF.MenuIconSquare,
-        link: ''
+        link: client.about
     },
     {
         name: 'Menus',
         icon: CUSTOM_ICON_REF.MenuIconSquare,
-        link: ''
+        link: client.menu
+    },
+    {
+        name: 'API List',
+        icon: CUSTOM_ICON_REF.MenuIconSquare,
+        link: client.menu
     },
 ]
 
-export const sidebarMenusOthers: Menu[] = [
+export const sidebarMenusOthers: any[] = [
     {
         name: 'Users and Groups',
         icon: CUSTOM_ICON_REF.FolderIcon,
