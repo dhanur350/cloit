@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Plus Jakarta Sans']
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -16,7 +19,13 @@ export default {
         'blue-shade-1': '#1D2939',
         'blue-shade-2': '#667085',
         'blue-shade-3': '#253BFF',
-        'green-color': '#9FF443'
+        'blue-shade-4': '#475467',
+        'blue-shade-5': '#1D2939',
+        'blue-shade-6': '#475467',
+        'blue-shade-7': '#98A2B3',
+        'green-color': '#9FF443',
+        'white-shade': '#F9FAFB',
+        'gray-shade': '#D0D5DD',
       },
     },
   },

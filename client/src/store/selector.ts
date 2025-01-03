@@ -1,0 +1,1 @@
+export const cloitselector:any = (state:any) => state.cloit;

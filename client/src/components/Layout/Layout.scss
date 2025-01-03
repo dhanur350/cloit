@@ -1,0 +1,19 @@
+.outlet-container {
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 8px;
+        border-radius: 15px;
+    }
+}
+
+.sidebar-mobile-button {
+    display: none;
+}
+
+@media only screen and (max-width:1000px) {
+    .sidebar-mobile-button {
+        display: block;
+    }
+}

@@ -1,0 +1,24 @@
+@media only screen and (max-width:1000px) {
+    .mobile-responsive-sidebar-close {
+        position: absolute;
+
+        .mobile-button {
+            display: none;
+        }
+    }
+
+    .mobile-responsive-sidebar-open {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0 !important;
+
+        .sidebar-logo-container {
+            display: flex !important;
+        }
+
+        .mobile-button {
+            display: block;
+        }
+    }
+}

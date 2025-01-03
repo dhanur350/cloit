@@ -42,4 +42,197 @@ export const sidebarMenusOthers: any[] = [
         icon: CUSTOM_ICON_REF.FolderIcon,
         link: ''
     },
+];
+
+export const menupageoptions: any[] = [
+    {
+        label: "Menu Options",
+        value: "menu-options"
+    },
+    {
+        label: "Menu Options",
+        value: "menu-options"
+    },
+]
+
+export const nestedMenu: any[] = [
+    {
+        id: 1,
+        name: "Category 1",
+        subitem: [
+            {
+                id: 1.1,
+                name: "Category 1.1",
+                subitem: [
+                    {
+                        id: '1.1.1',
+                        name: "Category 1.1.1",
+                    }
+                ]
+            },
+            {
+                id: '2',
+                name: 'Category 2',
+                subitem: [
+                    {
+                        id: 1.1,
+                        name: "Category 1.1",
+                        subitem: [
+                            {
+                                id: '1.1.1',
+                                name: "Category 1.1.1",
+                                subitem: [
+                                    {
+                                        id: 1.1,
+                                        name: "Category 1.1",
+                                        subitem: [
+                                            {
+                                                id: '1.1.1',
+                                                name: "Category 1.1.1",
+                                                subitem: [
+                                                    {
+                                                        id: 1.1,
+                                                        name: "Category 1.1",
+                                                        subitem: [
+                                                            {
+                                                                id: '1.1.1',
+                                                                name: "Category 1.1.1",
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        id: 1.2,
+                        name: 'Category 1.2',
+                        subitem: [
+                            {
+                                id: 1.1,
+                                name: "Category 1.1",
+                                subitem: [
+                                    {
+                                        id: '1.1.1',
+                                        name: "Category 1.1.1",
+                                        subitem: [
+                                            {
+                                                id: 1.1,
+                                                name: "Category 1.1",
+                                                subitem: [
+                                                    {
+                                                        id: '1.1.1',
+                                                        name: "Category 1.1.1",
+                                                        subitem: [
+                                                            {
+                                                                id: 1.1,
+                                                                name: "Category 1.1",
+                                                                subitem: [
+                                                                    {
+                                                                        id: '1.1.1',
+                                                                        name: "Category 1.1.1",
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 2,
+        name: "Category 2",
+        subitem: [
+            {
+                id: 1.1,
+                name: "Category 1.1",
+                subitem: [
+                    {
+                        id: '1.1.1',
+                        name: "Category 1.1.1",
+                        subitem: [
+                            {
+                                id: 1.1,
+                                name: "Category 1.1",
+                                subitem: [
+                                    {
+                                        id: '1.1.1',
+                                        name: "Category 1.1.1",
+                                        subitem: [
+                                            {
+                                                id: 1.1,
+                                                name: "Category 1.1",
+                                                subitem: [
+                                                    {
+                                                        id: '1.1.1',
+                                                        name: "Category 1.1.1",
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 3,
+        name: "Category 3",
+        subitem: [
+            {
+                id: 1.1,
+                name: "Category 1.1",
+                subitem: [
+                    {
+                        id: '1.1.1',
+                        name: "Category 1.1.1",
+                    }
+                ]
+            }
+        ]
+    }
+];
+
+export const inputList:any [] = [
+    {
+        id:"menu",
+        name: "menu",
+        placeholder: "Menu ID",
+        label: "Menu ID"
+    },
+    {
+        id:"depth",
+        name: "depth",
+        placeholder: "Depth",
+        label: "Depth"
+    },
+    {
+        id:"parent-data",
+        name: "parent-data",
+        placeholder: "Parent Data",
+        label: "Parent Data"
+    },
+    {
+        id:"name",
+        name: "name",
+        placeholder: "Name",
+        label: "Name"
+    },
 ]

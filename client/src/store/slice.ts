@@ -1,13 +1,8 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-export interface MenuItem {
-  id: string;
-  name: string;
-  children?: MenuItem[];
-}
-
-interface MenuState {
+export interface MenuState {
   menus: any;
+  sidebarOpen: boolean;
 }
 
 const initialState: MenuState = {
@@ -27,56 +22,19 @@ const initialState: MenuState = {
       ],
     },
   ],
+  sidebarOpen: false,
 };
 
 const menuSlice = createSlice({
-  name: "menu",
+  name: "cloit",
   initialState,
   reducers: {
-    getMenus: (state: MenuState) => {
-      return state.menus;
-    },
-    addMenuItem(state, action: PayloadAction<{ parentId: string; menu: MenuItem }>) {
-      const addItem = (menus: MenuItem[]) => {
-        menus.forEach((item) => {
-          if (item.id === action.payload.parentId) {
-            item.children = [...(item.children || []), action.payload.menu];
-          } else if (item.children) {
-            addItem(item.children);
-          }
-        });
-      };
-      addItem(state.menus);
-    },
-    updateMenuItem(state, action: PayloadAction<{ id: string; newName: string }>) {
-      const updateItem = (menus: MenuItem[]) => {
-        menus.forEach((item) => {
-          if (item.id === action.payload.id) {
-            item.name = action.payload.newName;
-          } else if (item.children) {
-            updateItem(item.children);
-          }
-        });
-      };
-      updateItem(state.menus);
-    },
-    deleteMenuItem(state, action: PayloadAction<{ id: string }>) {
-      const deleteItem = (menus: MenuItem[]) => {
-        return menus.filter((item) => {
-          if (item.children) {
-            item.children = deleteItem(item.children);
-          }
-          return item.id !== action.payload.id;
-        });
-      };
-      state.menus = deleteItem(state.menus);
-    },
-    saveMenu(state) {
-      console.log("Menu saved", state.menus);
-    },
+    setSideBarOpen: (state: any) => {
+      state.sidebarOpen = !state.sidebarOpen;
+    }
   },
 });
 
-export const { getMenus, addMenuItem, updateMenuItem, deleteMenuItem, saveMenu } =
+export const { setSideBarOpen } =
   menuSlice.actions;
 export default menuSlice.reducer;
